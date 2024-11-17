@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.box {
+  text-align: center;
+  padding: 20px;
+  color: greenyellow;
+  font-size: 16px;
+  font-weight: 600;
+}

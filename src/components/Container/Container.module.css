@@ -1,0 +1,28 @@
+.container {
+  width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+  }
+}
+
+@media only screen and (min-width: 765px) {
+  .container {
+    width: 765px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

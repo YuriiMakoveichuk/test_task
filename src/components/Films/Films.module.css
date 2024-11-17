@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+}
+
+.box {
+  text-align: center;
+  padding: 20px;
+  color: greenyellow;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

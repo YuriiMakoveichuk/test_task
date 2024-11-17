@@ -1,0 +1,71 @@
+.title {
+  text-align: center;
+  color: yellow;
+  font-size: 40px;
+  font-family: "Londrina Sketch", serif;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+}
+
+.text {
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  color: azure;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.box {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 16px 24px;
+  border-radius: 10px;
+  border: 2px solid burlywood;
+  text-align: center;
+  color: burlywood;
+  font-size: 16px;
+}
+
+.link:hover,
+.link:focus {
+  border: 2px solid greenyellow;
+  color: greenyellow;
+}
+
+@media only screen and (min-width: 765px) {
+  .title {
+    font-size: 80px;
+    letter-spacing: 16px;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    width: 600px;
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .link {
+    padding: 24px 32px;
+    border-radius: 20px;
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 120px;
+    letter-spacing: 32px;
+    margin-bottom: 50px;
+  }
+
+  .text {
+    width: 1000px;
+    font-size: 32px;
+  }
+}

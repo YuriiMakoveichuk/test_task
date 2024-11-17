@@ -1,0 +1,35 @@
+.header {
+  border-bottom: 2px solid rgba(173, 255, 47, 0.5);
+}
+
+.nav {
+  font-size: 16px;
+  color: burlywood;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.active {
+  color: greenyellow;
+}
+
+@media only screen and (min-width: 765px) {
+  .nav {
+    font-size: 32px;
+    color: burlywood;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
