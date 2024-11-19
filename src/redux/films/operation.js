@@ -10,7 +10,7 @@ export const getFilms = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const { data } = await instants.get("films");
-      console.log(data);
+
       return data.results;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

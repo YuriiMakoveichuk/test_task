@@ -7,8 +7,3 @@ export const selectHeroes = (state) => state.heroes.items;
 export const selectTotalCount = (state) => state.heroes.totalCount;
 
 export const selectCurrentPage = (state) => state.heroes.currentPage;
-
-//
-
-// export const selectHeroId = (state) =>
-//   state.heroes.items.find((hero) => hero.id);

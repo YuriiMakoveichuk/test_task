@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
-import HeroesList from "../../components/HeroesList/HeroesList";
+
 import Loader from "../../components/Loader/Loader.jsx";
+import HeroesList from "../../components/HeroesList/HeroesList";
+
 import { selectError, selectLoading } from "../../redux/heroes/selector.js";
 
 import css from "./HeroesPage.module.css";

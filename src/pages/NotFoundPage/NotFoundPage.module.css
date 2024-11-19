@@ -1,0 +1,15 @@
+.box {
+  text-align: center;
+  padding: 50px;
+  color: azure;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 24px;
+  margin-bottom: 30px;
+}

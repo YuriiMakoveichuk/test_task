@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-import css from "./Films.module.css";
+import { useEffect } from "react";
+
+import Loader from "../Loader/Loader.jsx";
+
 import {
   selectError,
   selectFilms,
   selectLoading,
 } from "../../redux/films/selector.js";
-import { useEffect } from "react";
 import { getFilms } from "../../redux/films/operation.js";
-import Loader from "../Loader/Loader.jsx";
+
+import css from "./Films.module.css";
 
 const Films = ({ detailsFilms }) => {
   const dispatch = useDispatch();
@@ -23,9 +26,6 @@ const Films = ({ detailsFilms }) => {
   if (!detailsFilms || !Array.isArray(detailsFilms)) {
     return <Loader />;
   }
-
-  console.log(films);
-  console.log(detailsFilms);
 
   const filteredFilms = films.filter((film) => detailsFilms.includes(film.id));
 

@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   selectCurrentPage,
   selectHeroes,
@@ -21,10 +22,6 @@ const Pagination = () => {
 
   const counts = fullList?.data?.count || [];
 
-  console.log(counts);
-
-  const test = fullList.next;
-
   const totalPages = Math.ceil(counts / 10);
 
   for (let index = 0; index < totalPages; index++) {
@@ -42,13 +39,13 @@ const Pagination = () => {
   return (
     <>
       <ul className={css.list}>
-        {pages.map((p) => (
+        {pages.map((page) => (
           <li
-            key={p}
-            onClick={() => changePage(p)}
-            className={p === currentPage ? css.active : css.item}
+            key={page}
+            onClick={() => changePage(page)}
+            className={page === currentPage ? css.active : css.item}
           >
-            {p}
+            {page}
           </li>
         ))}
       </ul>

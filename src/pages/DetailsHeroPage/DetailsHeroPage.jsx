@@ -1,30 +1,32 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getHeroId } from "../../redux/heroes/operation1.js";
-import { selectHeroes } from "../../redux/heroes/selector.js";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import GoBackBtn from "../../components/GoBackBtn/GoBackBtn.jsx";
 
-import css from "./DetailsHeroPage.module.css";
 import { Section } from "../../components/Section/Section.jsx";
 import { Container } from "../../components/Container/Container.jsx";
-import Starships from "../../components/Starships/Starships.jsx";
+import GoBackBtn from "../../components/GoBackBtn/GoBackBtn.jsx";
 import Films from "../../components/Films/Films.jsx";
+import Starships from "../../components/Starships/Starships.jsx";
+
+import { getHeroId } from "../../redux/heroes/operation1.js";
+import { selectHeroes } from "../../redux/heroes/selector.js";
+
+import css from "./DetailsHeroPage.module.css";
 
 const DetailsHeroPage = () => {
   const { heroId } = useParams();
 
+  const location = useLocation();
   const dispatch = useDispatch();
 
-  const backLinkRef = useRef("/people");
-
   const hero = useSelector(selectHeroes);
+
+  const backLinkRef = useRef(location.state?.from ?? "/people");
 
   useEffect(() => {
     dispatch(getHeroId(heroId));
   }, [dispatch, heroId]);
 
-  console.log(hero.starships);
   const detailsShips = hero.starships;
   const detailsFilms = hero.films;
 

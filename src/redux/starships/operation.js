@@ -19,14 +19,11 @@ const getAllStarships = async (page = 1, allStarships = []) => {
   }
 };
 
-// console.log("llStarships", allStarships);
-
 export const getStarships = createAsyncThunk(
   "starships/fetchStarships",
   async (_, thunkAPI) => {
     try {
       const starships = await getAllStarships();
-      console.log("data", starships);
 
       return starships;
     } catch (error) {

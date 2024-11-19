@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+
 import { Container } from "../../components/Container/Container.jsx";
 import { Section } from "../../components/Section/Section.jsx";
+
 import css from "./HomePage.module.css";
 
 const HomePage = () => {

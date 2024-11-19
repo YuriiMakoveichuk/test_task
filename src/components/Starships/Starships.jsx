@@ -1,5 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+
+import Loader from "../Loader/Loader.jsx";
+
 import { getStarships } from "../../redux/starships/operation.js";
 import {
   selectError,
@@ -8,7 +11,6 @@ import {
 } from "../../redux/starships/selector.js";
 
 import css from "./Starships.module.css";
-import Loader from "../Loader/Loader.jsx";
 
 const Starships = ({ detailsShips }) => {
   const dispatch = useDispatch();
@@ -24,9 +26,6 @@ const Starships = ({ detailsShips }) => {
   if (!detailsShips || !Array.isArray(detailsShips)) {
     return <Loader />;
   }
-
-  console.log(detailsShips);
-  console.log(starships);
 
   const filteredStarships = starships.filter((ship) =>
     detailsShips.includes(ship.id)

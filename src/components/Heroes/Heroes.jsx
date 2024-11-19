@@ -1,11 +1,13 @@
-// import { selectHeroes } from "../../redux/heroes/selector.js";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getHeroes } from "../../redux/heroes/operation1.js";
-import { selectHeroes } from "../../redux/heroes/selector.js";
-
 import Hero from "./Hero.jsx";
+
+import { getHeroes } from "../../redux/heroes/operation1.js";
+import {
+  selectCurrentPage,
+  selectHeroes,
+} from "../../redux/heroes/selector.js";
 
 import css from "./Heroes.module.css";
 
@@ -14,14 +16,16 @@ const Heroes = () => {
 
   const fullList = useSelector(selectHeroes);
 
+  const page = useSelector(selectCurrentPage);
+
   useEffect(() => {
-    dispatch(getHeroes());
-  }, [dispatch]);
+    const currentPage = page || 1;
+    dispatch(getHeroes(currentPage));
+  }, [dispatch, page]);
 
   const results = fullList?.data?.results || [];
 
   const heroes = results;
-  // console.log(fullList);
 
   return (
     <>

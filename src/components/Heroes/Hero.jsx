@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import css from "./Heroes.module.css";
 
 const Hero = ({ hero }) => {
